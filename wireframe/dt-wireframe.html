@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency & Weather Dashboard</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Courier New", monospace;
+        padding: 20px;
+        background-color: #f5f5f5;
+      }
+
+      .dashboard {
+        border: 2px solid #000;
+        padding: 20px;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #000;
+      }
+
+      .container {
+        display: flex;
+        gap: 20px;
+      }
+
+      .panel {
+        flex: 1;
+        border: 2px solid #000;
+        padding: 15px;
+      }
+
+      .panel h3 {
+        text-align: center;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #000;
+      }
+
+      .form-group {
+        margin-bottom: 12px;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      .input-wrapper {
+        border: 1px solid #000;
+        padding: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .input-wrapper input {
+        border: none;
+        font-family: inherit;
+        font-size: 14px;
+        width: 100%;
+      }
+
+      .swap-icon {
+        text-align: center;
+        font-weight: bold;
+        margin: 10px 0;
+        cursor: pointer;
+      }
+
+      .button {
+        background-color: #000;
+        color: #fff;
+        border: 2px solid #000;
+        padding: 10px 15px;
+        cursor: pointer;
+        font-family: inherit;
+        font-size: 14px;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      .result {
+        margin-top: 15px;
+        padding: 10px;
+        border: 1px solid #000;
+        font-weight: bold;
+      }
+
+      .weather-info {
+        margin-top: 15px;
+        border-top: 2px solid #000;
+        padding-top: 10px;
+      }
+
+      .weather-detail {
+        padding: 5px 0;
+        border-bottom: 1px solid #000;
+      }
+
+      .weather-label {
+        font-weight: bold;
+      }
+
+      .weather-value {
+        margin-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dashboard">
+      <div class="header">
+        <div><strong>[Logo]</strong> Currency & Weather Dashboard</div>
+        <div>[Dark Mode v]</div>
+      </div>
+
+      <div class="container">
+        <!-- Currency Converter Panel -->
+        <div class="panel">
+          <h3>Currency Converter</h3>
+
+          <div class="form-group">
+            <label>Amount:</label>
+            <div class="input-wrapper">
+              <input type="number" value="1.00" step="0.01" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>From:</label>
+            <div class="input-wrapper">
+              <input type="text" value="GBP" readonly />
+              <span>▼</span>
+            </div>
+          </div>
+
+          <div class="swap-icon">[ Swap Icon ]</div>
+
+          <div class="form-group">
+            <label>To:</label>
+            <div class="input-wrapper">
+              <input type="text" value="USD" readonly />
+              <span>▼</span>
+            </div>
+          </div>
+
+          <button class="button">[ Convert Currency ]</button>
+
+          <div class="result">Result: 1 GBP = 1.35 USD</div>
+        </div>
+
+        <!-- Weather Panel -->
+        <div class="panel">
+          <h3>Weather</h3>
+
+          <div class="form-group">
+            <label>City:</label>
+            <div class="input-wrapper">
+              <input type="text" value="London" />
+            </div>
+          </div>
+
+          <button class="button">[ Get Weather ]</button>
+
+          <div class="weather-info">
+            <div class="weather-detail">
+              <span class="weather-label">London</span>
+            </div>
+            <div class="weather-detail">
+              <span class="weather-label">Temp:</span>
+              <span class="weather-value">24.81°C</span>
+            </div>
+            <div class="weather-detail">
+              <span class="weather-label">Clear Sky</span>
+              <span class="weather-value">Hum: 58%</span>
+            </div>
+            <div class="weather-detail">
+              <span class="weather-label">Wind:</span>
+              <span class="weather-value">4.12 m/s</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
