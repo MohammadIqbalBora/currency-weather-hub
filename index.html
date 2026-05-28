@@ -1,28 +1,36 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Meta information for character encoding and responsive design -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Page title shown in browser tab -->
     <title>Global Currency & Weather Dashboard</title>
 
+    <!-- Link to external CSS stylesheet -->
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body class="light-mode">
+    <!-- Main container that wraps the entire dashboard -->
     <div class="container">
-      <!-- HEADER -->
+      <!-- ================= HEADER SECTION ================= -->
       <header>
+        <!-- Main page heading -->
         <h1>Currency & Weather Dashboard</h1>
 
+        <!-- Button to toggle between light and dark mode -->
         <button id="theme-toggle">Dark Mode</button>
       </header>
 
-      <!-- MAIN CONTENT -->
+      <!-- ================= MAIN CONTENT AREA ================= -->
       <main>
-        <!-- CURRENCY CONVERTER -->
+        <!-- ================= CURRENCY CONVERTER SECTION ================= -->
         <section class="card currency-card">
           <h2>Currency Converter</h2>
 
+          <!-- Input for entering the amount to convert -->
           <div class="form-group">
             <label for="amount">Amount</label>
 
@@ -34,42 +42,48 @@
             />
           </div>
 
+          <!-- Currency selection dropdowns and swap button -->
           <div class="currency-selectors">
+            <!-- From currency dropdown -->
             <div>
               <label for="from-currency">From</label>
-
               <select id="from-currency"></select>
             </div>
 
+            <!-- Button to swap "from" and "to" currencies -->
             <button id="swap-btn">⇄</button>
 
+            <!-- To currency dropdown -->
             <div>
               <label for="to-currency">To</label>
-
               <select id="to-currency"></select>
             </div>
           </div>
 
+          <!-- Button to trigger currency conversion -->
           <button id="convert-btn">Convert Currency</button>
 
+          <!-- Area where conversion result will be displayed -->
           <div id="result">Conversion result appears here</div>
         </section>
 
-        <!-- WEATHER SECTION -->
+        <!-- ================= WEATHER SECTION ================= -->
         <section class="card weather-card">
           <h2>Weather</h2>
 
+          <!-- Input and button for searching weather by city -->
           <div class="form-group">
             <input type="text" id="city-input" placeholder="Enter city name" />
-
             <button id="weather-btn">Get Weather</button>
           </div>
 
+          <!-- Weather results will be displayed here -->
           <div id="weather-result"></div>
         </section>
       </main>
     </div>
 
+    <!-- Link to external JavaScript file -->
     <script src="script.js"></script>
   </body>
 </html>

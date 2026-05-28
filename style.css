@@ -1,5 +1,6 @@
 /* =========================
-   RESET
+   RESET STYLES
+   Removes default browser spacing and ensures consistent box model
    ========================= */
 
 * {
@@ -9,7 +10,8 @@
 }
 
 /* =========================
-   BASE BODY
+   BASE BODY STYLING
+   Sets default font and enables smooth theme transitions
    ========================= */
 
 body {
@@ -20,6 +22,7 @@ body {
 
 /* =========================
    LIGHT MODE (DEFAULT THEME)
+   Styling for light theme background and text
    ========================= */
 
 body.light-mode {
@@ -28,7 +31,8 @@ body.light-mode {
 }
 
 /* =========================
-   DARK MODE
+   DARK MODE THEME
+   Styling for dark mode background and text
    ========================= */
 
 body.dark-mode {
@@ -37,7 +41,8 @@ body.dark-mode {
 }
 
 /* =========================
-   LAYOUT
+   MAIN LAYOUT CONTAINER
+   Centers content and controls page width
    ========================= */
 
 .container {
@@ -47,7 +52,10 @@ body.dark-mode {
     padding: 20px;
 }
 
-
+/* =========================
+   HEADER SECTION
+   Contains title and theme toggle button positioning
+   ========================= */
 
 header {
     position: relative;
@@ -55,18 +63,23 @@ header {
     margin-bottom: 90px;
 }
 
+/* Main page title */
 h1 {
     font-size: 2rem;
-    
 }
 
-/* theme button */
+/* Theme toggle button positioning */
 #theme-toggle {
     position: absolute;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
 }
+
+/* =========================
+   MAIN GRID LAYOUT
+   Creates two-column layout for currency and weather cards
+   ========================= */
 
 main {
     display: grid;
@@ -75,7 +88,8 @@ main {
 }
 
 /* =========================
-   CARDS
+   CARD COMPONENTS
+   Reusable UI blocks for currency and weather sections
    ========================= */
 
 .card {
@@ -86,38 +100,55 @@ main {
     margin: 15px auto;
     text-align: center;
     transition: all 0.3s ease;
-  
 }
 
-/* LIGHT MODE → DARK CARDS */
+/* =========================
+   CARD STYLING - LIGHT MODE
+   Dark cards used inside light theme
+   ========================= */
+
 body.light-mode .card {
     background: darkgrey;
     color: #ffffff;
     box-shadow: 0 20px 20px rgba(0,0,0,0.2);
 }
 
-/* DARK MODE → LIGHT CARDS */
+/* =========================
+   CARD STYLING - DARK MODE
+   Light cards used inside dark theme
+   ========================= */
+
 body.dark-mode .card {
     background: #f2f2f2;
     color: #111111;
     box-shadow: 0 20px 20px rgba(0,0,0,0.3);
 }
 
+/* =========================
+   ACTION BUTTONS (MAIN ACTIONS)
+   Convert & Weather buttons styling
+   ========================= */
 
-
-#convert-btn, #weather-btn{
+#convert-btn,
+#weather-btn {
     margin: 20px auto;
     display: block;
     border-style: solid;
 }
 
 /* =========================
-   FORMS
+   FORM STYLING
+   Controls spacing for input groups
    ========================= */
 
 .form-group {
     margin-bottom: 20px;
 }
+
+/* =========================
+   INPUTS & SELECT DROPDOWNS
+   Shared styling for form fields
+   ========================= */
 
 input,
 select {
@@ -130,14 +161,22 @@ select {
     outline: none;
 }
 
-/* inputs in dark mode */
+/* =========================
+   FORM FIELDS - DARK MODE
+   Input styling for dark theme
+   ========================= */
+
 body.dark-mode input,
 body.dark-mode select {
     background-color: #e0e0e0;
     color: #111;
 }
 
-/* inputs in light mode */
+/* =========================
+   FORM FIELDS - LIGHT MODE
+   Input styling for light theme
+   ========================= */
+
 body.light-mode input,
 body.light-mode select {
     background-color: #2c2c2c;
@@ -146,7 +185,8 @@ body.light-mode select {
 }
 
 /* =========================
-   BUTTONS
+   GENERAL BUTTON STYLING
+   Base styles for all buttons
    ========================= */
 
 button {
@@ -158,24 +198,35 @@ button {
     transition: all 0.3s ease;
 }
 
-/* LIGHT MODE BUTTONS → DARK */
+/* =========================
+   BUTTONS - LIGHT MODE
+   Dark buttons for contrast in light theme
+   ========================= */
+
 body.light-mode button {
     background: #1e1e1e;
     color: #ffffff;
 }
 
-/* DARK MODE BUTTONS → LIGHT */
+/* =========================
+   BUTTONS - DARK MODE
+   Light buttons for contrast in dark theme
+   ========================= */
+
 body.dark-mode button {
     background: #f2f2f2;
     color: #111111;
 }
 
-/* hover */
+/* Button hover effect */
 button:hover {
     opacity: 0.85;
 }
 
-/* special swap button */
+/* =========================
+   SWAP BUTTON (⇄)
+   Special styling for currency swap action
+   ========================= */
 
 #swap-btn {
     margin: 20px auto;
@@ -186,9 +237,9 @@ button:hover {
     font-size: 1.3rem;
 }
 
-
 /* =========================
-   RESULTS TEXT
+   OUTPUT / RESULT DISPLAY
+   Shows converted currency and weather data
    ========================= */
 
 #result,
@@ -199,7 +250,8 @@ button:hover {
 }
 
 /* =========================
-   RESPONSIVE
+   RESPONSIVE DESIGN
+   Adjusts layout for tablets and mobile screens
    ========================= */
 
 @media (max-width: 900px) {
@@ -215,11 +267,11 @@ button:hover {
     }
 
     #theme-toggle {
-    position: static;
-    margin: 30px;
-  }
+        position: static;
+        margin: 30px;
+    }
 
-  #weather-result {
-  min-height: 250px;
-}
+    #weather-result {
+        min-height: 250px;
+    }
 }
